@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: null
 ---
 
 var store = [
@@ -18,8 +18,7 @@ var store = [
         "title": {{ doc.title | jsonify }},
         "excerpt":
           {%- if site.search_full_content == true -%}
-            {{ doc.content | newline_to_br |
-              replace:"<br />", " " |
+            {{ doc.content |
               replace:"</p>", " " |
               replace:"</h1>", " " |
               replace:"</h2>", " " |
@@ -29,8 +28,7 @@ var store = [
               replace:"</h6>", " "|
             strip_html | strip_newlines | jsonify }},
           {%- else -%}
-            {{ doc.content | newline_to_br |
-              replace:"<br />", " " |
+            {{ doc.content |
               replace:"</p>", " " |
               replace:"</h1>", " " |
               replace:"</h2>", " " |
@@ -43,7 +41,12 @@ var store = [
         "categories": {{ doc.categories | jsonify }},
         "tags": {{ doc.tags | jsonify }},
         "url": {{ doc.url | absolute_url | jsonify }},
-        "teaser": {{ teaser | absolute_url | jsonify }}
+        "teaser":
+          {%- if teaser contains "://" -%}
+            {{ teaser | jsonify }}
+          {%- else -%}
+            {{ teaser | absolute_url | jsonify }}
+          {%- endif -%}
       }{%- unless forloop.last and l -%},{%- endunless -%}
     {%- endfor -%}
   {%- endfor -%}]

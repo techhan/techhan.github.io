@@ -1,76 +1,77 @@
-require "bundler/gem_tasks"
 require "jekyll"
 require "listen"
+require 'rake'
+require 'date'
+require 'yaml'
 
-def listen_ignore_paths(base, options)
-  [
-    /_config\.ya?ml/,
-    /_site/,
-    /\.jekyll-metadata/
-  ]
-end
 
-def listen_handler(base, options)
-  site = Jekyll::Site.new(options)
-  Jekyll::Command.process_site(site)
-  proc do |modified, added, removed|
-    t = Time.now
-    c = modified + added + removed
-    n = c.length
-    relative_paths = c.map{ |p| Pathname.new(p).relative_path_from(base).to_s }
-    print Jekyll.logger.message("Regenerating:", "#{relative_paths.join(", ")} changed... ")
-    begin
-      Jekyll::Command.process_site(site)
-      puts "regenerated in #{Time.now - t} seconds."
-    rescue => e
-      puts "error:"
-      Jekyll.logger.warn "Error:", e.message
-      Jekyll.logger.warn "Error:", "Run jekyll build --trace for more information."
-    end
+CONFIG = YAML.load(File.read('_config.yml'))
+USERNAME = CONFIG["username"]
+REPO = CONFIG["repo"]
+SOURCE_BRANCH = CONFIG["branch"]
+DESTINATION_BRANCH = "gh-pages"
+
+def check_destination
+  unless Dir.exist? CONFIG["destination"]
+    sh "git clone https://$GIT_NAME:$GH_TOKEN@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
   end
 end
 
-task :preview do
-  base = Pathname.new('.').expand_path
-  options = {
-    "source"        => base.join('test').to_s,
-    "destination"   => base.join('test/_site').to_s,
-    "force_polling" => false,
-    "serving"       => true,
-    "theme"         => "minimal-mistakes-jekyll"
-  }
-
-  options = Jekyll.configuration(options)
-
-  ENV["LISTEN_GEM_DEBUGGING"] = "1"
-  listener = Listen.to(
-    base.join("_data"),
-    base.join("_includes"),
-    base.join("_layouts"),
-    base.join("_sass"),
-    base.join("assets"),
-    options["source"],
-    :ignore => listen_ignore_paths(base, options),
-    :force_polling => options['force_polling'],
-    &(listen_handler(base, options))
-  )
-
-  begin
-    listener.start
-    Jekyll.logger.info "Auto-regeneration:", "enabled for '#{options["source"]}'"
-
-    unless options['serving']
-      trap("INT") do
-        listener.stop
-        puts "     Halting auto-regeneration."
-        exit 0
-      end
-
-      loop { sleep 1000 }
-    end
-  rescue ThreadError
-    # You pressed Ctrl-C, oh my!
+namespace :site do
+  desc "Generate the site"
+  task :build do
+    check_destination
+    sh "bundle exec jekyll build"
   end
 
-  Jekyll::Commands::Serve.process(options)
+  desc "Generate the site and serve locally"
+  task :serve do
+    check_destination
+    sh "bundle exec jekyll serve"
+  end
+
+  desc "Generate the site, serve locally and watch for changes"
+  task :watch do
+    sh "bundle exec jekyll serve --watch"
+  end
+
+  desc "Generate the site and push changes to remote origin"
+  task :deploy do
+    # Detect pull request
+    if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+      puts 'Pull request detected. Not proceeding with deploy.'
+      exit
+    end
+
+    # Configure git if this is run in Travis CI
+    if ENV["TRAVIS"]
+      sh "git config --global user.name $GIT_NAME"
+      sh "git config --global user.email $GIT_EMAIL"
+      sh "git config --global push.default simple"
+    end
+
+    # Make sure destination folder exists as git repo
+    check_destination
+
+    sh "git checkout #{SOURCE_BRANCH}"
+    Dir.chdir(CONFIG["destination"]) { sh "git checkout #{DESTINATION_BRANCH}" }
+
+    # Generate the site
+    sh "bundle exec jekyll build"
+    
+    # Run Algolia 
+    sh "bundle exec jekyll algolia"
+
+    # Commit and push to github
+    sha = `git log`.match(/[a-z0-9]{40}/)[0]
+    Dir.chdir(CONFIG["destination"]) do
+      # check if there is anything to add and commit, and pushes it
+      sh "if [ -n '$(git status)' ]; then
+            git add --all .;
+            git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.';
+            git push --quiet origin #{DESTINATION_BRANCH};
+         fi"
+      puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
+    end
+  end
 end
