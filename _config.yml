@@ -16,25 +16,25 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Imreplay blog"
+title                    : "techhan blog"
 title_separator          : "-"
-name                     : "Imreplay"
-description              : "Imreplay's study blog."
-url                      : "https://imreplay.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "techhan"
+description              : "techhan's dev task notes."
+url                      : "https://techhan.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "imreplay/blog" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "techhan/techhan.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "facebook" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
   disqus:
-    shortname            : imreplay-blog # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : techhan # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
-    appid                : "196726300751751"
+    appid                : #"196726300751751"
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
@@ -80,7 +80,7 @@ naver_site_verification  : "33fb43905fdb96708b2bde0a9edace6cd2638167"
 twitter:
   username               :
 facebook:
-  username               : "imreplay08"
+  username               : #"imreplay08"
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -101,26 +101,26 @@ analytics:
 
 # Site Author
 author:
-  name             : "Imreplay"
+  name             : "techhan"
   avatar           : "/assets/img/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "천천히 굴러가는 개인 공부 블로그"
-  location         : "Republic of Korea"
-  email            : "imreplay@imreplay.com"
+  bio              : "Always a Student"
+  location         : "Seoul, Republic of Korea"
+  email            : #"imreplay@imreplay.com"
   uri              : 
-  home             : "https://imreplay.com" # null (default), "absolute or relative url to link to author home"
-  bitbucket        : "imreplay"
+  home             : "https://techhan.github.io" # null (default), "absolute or relative url to link to author home"
+  bitbucket        : #"imreplay"
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "imreplay08"
+  facebook         : #"imreplay08"
   foursquare       :
-  github           : "imreplay"
-  gitlab           : "imreplay"
+  github           : "techhan"
+  gitlab           : #"imreplay"
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : "imreplay" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : #"imreplay" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
@@ -327,10 +327,10 @@ defaults:
 # or "master" otherwise
 safe: False
 lsi: False
-username: imreplay
-repo: blog
+#username: imreplay
+#repo: blog
 branch: master
-relative_source: ../blog/
-destination: ../posts
-production_url:  https://imreplay.com
-source_url:  https://github.com/imreplay/blog/
+#relative_source: ../blog/
+#destination: ../posts
+#production_url:  https://imreplay.com
+#source_url:  https://github.com/imreplay/blog/
