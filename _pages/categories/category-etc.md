@@ -1,12 +1,12 @@
 ---
-title: "Post about Blogging"
+title: "Post about ETC"
 layout: archive
-permalink: /categories/blogging
+permalink: /categories/etc
 author_profile: true
 sidebar_main: true
 ---
 
-{% assign posts = site.categories.blogging | sort:"date" %}
+{% assign posts = site.categories.etc | sort:"date" %}
 
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}

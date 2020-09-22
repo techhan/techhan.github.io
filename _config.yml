@@ -262,7 +262,7 @@ defaults:
 
   # _posts/blogging
   - scope:
-      path: "_posts/blogging"
+      path: "_posts/etc"
       type: posts
     values:
       layout: single
@@ -273,7 +273,7 @@ defaults:
       search: true
       related: true
       sidebar:
-        nav: sidebar-blogging
+        nav: sidebar-etc
         
   # _posts/Wargame
   - scope:
@@ -288,7 +288,7 @@ defaults:
       search: true
       related: true
       sidebar:
-        title: "Wargame 카테고리"
+        title: "Category"
         nav: sidebar-wargame
 
 
