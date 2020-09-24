@@ -15,7 +15,7 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
+    padding: 0.5em;
     max-width: 100%;
     display: -webkit-box;
     display: flex;
@@ -75,6 +75,8 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  //메뉴 기울임 추가
+  font-style: italic;
 
   &--lg {
     padding-right: 2em;

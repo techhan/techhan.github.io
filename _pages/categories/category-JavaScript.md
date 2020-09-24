@@ -1,12 +1,12 @@
 ---
-title: "Post about Wargame"
+title: "Post about JavaScript"
 layout: archive
-permalink: /categories/wargame
+permalink: /categories/JavaScript
 author_profile: true
 sidebar_main: true
 ---
 
-{% assign posts = site.categories.Wargame | sort:"tags" | reverse %}
+{% assign posts = site.categories.JavaScript | sort:"date" %}
 
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
