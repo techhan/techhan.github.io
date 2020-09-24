@@ -105,7 +105,7 @@ author:
   name             : "techhan"
   avatar           : "/assets/img/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Always a Student"
-  location         : "Seoul, Republic of Korea"
+  location         : "Seoul"
   email            : #"imreplay@imreplay.com"
   uri              : 
   home             : "https://techhan.github.io" # null (default), "absolute or relative url to link to author home"

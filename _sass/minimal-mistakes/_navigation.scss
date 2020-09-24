@@ -325,6 +325,8 @@
 
 .nav__list {
   margin-bottom: 1.5em;
+  //모바일 Toogle 상단 공간주기
+  margin-top:1em;
 
   input[type="checkbox"],
   label {
