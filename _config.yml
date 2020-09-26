@@ -263,7 +263,7 @@ defaults:
 
   # _posts/blogging
   - scope:
-      path: "_posts/etc"
+      path: "_posts/Etc"
       type: posts
     values:
       layout: single
