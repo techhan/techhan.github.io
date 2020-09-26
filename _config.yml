@@ -274,11 +274,11 @@ defaults:
       search: true
       related: true
       sidebar:
-        nav: sidebar-etc
+        nav: sidebar-Etc
         
   # _posts/Wargame
   - scope:
-      path: "_posts/Wargame"
+      path: "_posts/TIL"
       type: posts
     values:
       layout: single
@@ -290,8 +290,7 @@ defaults:
       related: true
       sidebar:
         title: "Category"
-        nav: sidebar-wargame
-
+        nav: sidebar-TIL
 
   # _posts
   - scope:
