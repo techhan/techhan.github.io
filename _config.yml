@@ -51,7 +51,7 @@ staticman:
   generatedFields:
     date:
       type               : # "date"
-      options:s
+      options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 reCaptcha:
   siteKey                :
@@ -263,7 +263,7 @@ defaults:
 
   # _posts/blogging
   - scope:
-      path: "_posts/Etc"
+      path: "_posts/etcs"
       type: posts
     values:
       layout: single
@@ -278,7 +278,7 @@ defaults:
         
   # _posts/Wargame
   - scope:
-      path: "_posts/TIL"
+      path: "_posts/til"
       type: posts
     values:
       layout: single
@@ -290,7 +290,7 @@ defaults:
       related: true
       sidebar:
         title: "Category"
-        nav: sidebar-TIL
+        nav: sidebar-til
 
   # _posts
   - scope:

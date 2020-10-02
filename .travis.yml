@@ -1,19 +1,14 @@
+# .travis.yml
+# This file should be at the root of your project
 language: ruby
 cache: bundler
-
-install:
-  # Install Jekyll and dependencies
-  - bundle install
-
+before_install:
+  - gem install bundler
 script:
-  - bundle exec rake site:deploy --quiet
+  - bundle exec jekyll algolia
 branches:
   only:
     # Change this to gh-pages if you're deploying using the gh-pages branch
     - master
 rvm:
- - 2.4.2
-
-env:
-  global:
-    secure: "id1IpzD7VUpqkLT3fHMBhG7JEqk5YNN9MSxwiAo7UznDmCCASrMsPrTWKhbvn1cn9So/eFcHBtZdg0G2gMV99yY1M3wk+AezUDXVtVZRIRd0Vej15onPKLtZKM7+Ef6FEfcqoIed6fA++AziAJDYiRCwK83A0fG1gFuyr7Ag4PAU010+XTIEEqcBwBhtiDn901ayKvGFLW96rBHoE76OqguyVRARm+Zsu1oz14Lbf1EbuSW575JtkrOTWxl/gzKbzQn1DDEwp1BCurh6RrU/tWzDmKyqsaH9azVbSrHZTS3YTpZptgaXb/s948jSg9DDNJb6AVpZ/vu6eHaJt2xDOT+JRCEzoruf7TQV+XDUUDCoJLOrz4keH09k6AclNfbL5ehIiq0OzyQtcXqw5l6h0uIvybh6pcB7Loj20jQQyOsEiN2E85vMcMuLKeKndW4rCQMGbfugAEmlsvC56ksX9w1ubPj0kZHUMt4TZ4KgS1/CsXZDpdzONZ//Q4ex7xxthsh9m+zuJOPjNj3YptHNRWryzIermTcQbIkw8dRqrCccndZgy1HVAgNCp03i3A7nGc12WkLhvSmdvTwzOKKqgDynfPN91secP02HmgX+BmxEcMhMialPu3s53G5AhvJK4co81un6tVqoKMZcEYt86fR3sEbwIvLfU7pg0S6KPzA="
+ - 2.4
