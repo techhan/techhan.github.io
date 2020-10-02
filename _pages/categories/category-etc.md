@@ -1,7 +1,7 @@
 ---
 title: "Post about Etc"
 layout: archive
-permalink: /categories/Etc
+permalink: /categories/etc
 author_profile: true
 sidebar_main: true
 ---

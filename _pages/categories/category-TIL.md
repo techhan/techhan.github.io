@@ -1,7 +1,7 @@
 ---
 title: "Post about TIL"
 layout: archive
-permalink: /categories/TIL
+permalink: /categories/til
 author_profile: true
 sidebar_main: true
 ---

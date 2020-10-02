@@ -273,8 +273,8 @@ defaults:
       share: true
       search: true
       related: true
-      sidebar:
-        nav: sidebar-Etc
+      #sidebar:
+       # nav: sidebar-Etc
         
   # _posts/Wargame
   - scope:
