@@ -5,11 +5,11 @@ main:
   - title: "Category"
     url: "/categories/"
 
-posts:
-  - title: til
-    children:
-      - title : "codeup"
-        url: /categories/#til
+#posts:
+#  - title: til
+#    children:
+#      - title : "codeup"
+#        url: /categories/#til
 
 # 블로그 만들기 포스트 사이드바
 sidebar-blogging:
