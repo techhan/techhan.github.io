@@ -1,5 +1,5 @@
 ---
-title: "Post about ETC"
+title: "Post about Etc"
 layout: archive
 permalink: /categories/Etc
 author_profile: true
