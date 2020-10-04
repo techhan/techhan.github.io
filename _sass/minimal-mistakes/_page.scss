@@ -38,6 +38,7 @@
     margin-right: 0;
     width: 100%;
     clear: both;
+  
 
     .page__content,
     .page__meta,
@@ -55,7 +56,7 @@
 .page__title {
   font-size: 2.123em;
   margin-top: 0;
-  margin-bottom: 80px;
+  margin-bottom: 18px;
   line-height: 1;
 
   & + .page__meta {

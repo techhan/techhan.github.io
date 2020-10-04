@@ -1,12 +1,12 @@
 ---
 layout: archive
-permalink: /categories/til
+permalink: /categories/TIL
 title: "Post about TIL"
 author_profile: true
 sidebar_main: true
 ---
 
-{% assign posts = site.categories.til | sort:"date" | reverse %}
+{% assign posts = site.categories.TIL | sort:"date" | reverse %}
 
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}

@@ -6,14 +6,14 @@
         <span class="nav__sub-title" v-on:click='togglec()'>Categories</span>
         <ul v-show="flag_c">
         {% for category in site.categories %}
-           <li><a href="/categories/{{category[0] | slugify}}" class="">{{category[0] | capitalize}} ({{category[1].size}})</a></li>
+           <li><a href="/categories/{{category[0] | slugify}}" class="">{{category[0] | none}} ({{category[1].size}})</a></li>
         {% endfor %}
         </ul>
         
         <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
         <ul v-show="flag_t">
         {% for tag in site.tags %}
-           <li><a href="/tags/#{{tag[0] | slugify}}" class="">{{tag[0] | capitalize }} ({{tag[1].size}})</a></li>
+           <li><a href="/tags/#{{tag[0] | slugify}}" class="">{{tag[0] | none }} ({{tag[1].size}})</a></li>
         {% endfor %}
         </ul>
         

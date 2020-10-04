@@ -57,6 +57,10 @@ nav,
 section {
   display: block;
 }
+//포스트 헤더 밑 공백 추가
+header {
+  margin-bottom: 70px;
+}
 
 /* Display block in IE6-9 and FF3 */
 
