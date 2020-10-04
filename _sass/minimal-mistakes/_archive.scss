@@ -43,12 +43,14 @@
   a + a {
     opacity: 0.5;
   }
+  :hover {
+    color:#7791b0;
+  }
 }
-// 게시글 이름 마우스오버시 색깔 변경
-.archive__item-title :hover{
-  color:#7791b0;
-  
-}
+  // 게시글 이름 마우스오버시 색깔 변경
+  //.archive__item-title:hover{
+  //}
+
 /* remove border*/
 .page__content {
   .archive__item-title {
