@@ -263,7 +263,7 @@ defaults:
 
   # _posts/blogging
   - scope:
-      path: "_posts/etcs"
+      path: "_posts/etc"
       type: posts
     values:
       layout: single
@@ -278,7 +278,7 @@ defaults:
         
   # _posts/Wargame
   - scope:
-      path: "_posts/til"
+      path: "_posts/TIL"
       type: posts
     values:
       layout: single
@@ -290,7 +290,7 @@ defaults:
       related: true
       sidebar:
         title: "Category"
-        nav: sidebar-til
+        nav: sidebar-TIL
 
   # _posts
   - scope:
