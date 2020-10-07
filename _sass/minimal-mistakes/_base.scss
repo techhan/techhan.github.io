@@ -109,7 +109,7 @@ abbr[data-original-title] {
 
 blockquote {
   margin: 2em 1em 2em 0;
-  padding-left: 0em;
+  padding-left: 1em;
   padding-right: 1em;
   font-style: normal;
   border-left: 0.25em solid $primary-color;
@@ -327,7 +327,7 @@ nav {
   li ul,
   li ol {
     margin-top: 0;
-    margin-left: -7em;
+    margin-left: 1em;
   }
 }
 
