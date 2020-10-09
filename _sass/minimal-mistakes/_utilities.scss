@@ -451,8 +451,11 @@ body:hover .visually-hidden button {
   text-decoration: none;
 }
 
+/*각주 부분 border 추가*/
 .footnotes {
   color: mix(#fff, $gray, 25%);
+  border-top: 1px solid #7d8286;
+  border-bottom: 1px solid #7d8286;
 
   ol,
   li,
@@ -463,12 +466,14 @@ body:hover .visually-hidden button {
 }
 
 a.reversefootnote {
+  
   color: $gray;
   text-decoration: none;
-
+  
   &:hover {
     text-decoration: underline;
   }
+  
 }
 
 /*
