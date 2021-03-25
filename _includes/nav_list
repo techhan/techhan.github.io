@@ -7,7 +7,7 @@
   <ul class="nav__items">
     {% for nav in navigation %}
       <li>
-        {% if nav.url %}
+        {% if nav.url  %}
           {% comment %} internal/external URL check {% endcomment %}
           {% if nav.url contains "://" %}
             {% assign nav_url = nav.url %}

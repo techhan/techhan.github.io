@@ -6,7 +6,7 @@
         <span class="nav__sub-title" v-on:click='togglec()'>Categories</span>
         <ul v-show="flag_c">
         {% for category in site.categories %}
-           <li><a href="/categories/{{category[0] }}" class="">{{category[0] | none}} ({{category[1].size}})</a></li>
+           <li><a href="/categories/{{category[0] }}" class="">{{category[0] | capitalize }} ({{category[1].size}})</a></li>
         {% endfor %}
         </ul>
         
