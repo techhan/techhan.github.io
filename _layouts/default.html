@@ -8,10 +8,28 @@
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
 -->
+<!-- 
+<style>
+.box,
+.box_done,
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item input {
+  font-size: 16px;
+  margin: 0 01em 0.25em -1.6em;
+  vertical-align: middle;
+} -->
+
+</style>
+
+
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <script data-ad-client="ca-pub-1980241550356706" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
@@ -20,6 +38,11 @@
     {% include masthead.html %}
 
     <div class="initial-content">
+<!--       {{ content | replace: '
+      <li>[ ]', '</li>
+      <li class="box">' | replace: '</li>
+      <li>[x]', '</li>
+      <li class="box_done">' }}</li> -->
       {{ content }}
     </div>
 

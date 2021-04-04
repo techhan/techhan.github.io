@@ -2,8 +2,8 @@ source "https://rubygems.org"
 
 gem "minimal-mistakes-jekyll"
 
-gem "jekyll", "~> 3.6.2"
-gem "github-pages", "~> 168"
+gem "jekyll", "~> 3.8.5"
+gem "github-pages", "~> 202"
 gem "rake", "~> 12.3.0"
 
 group :jekyll_plugins do
@@ -14,6 +14,8 @@ group :jekyll_plugins do
   gem "jekyll-algolia"
   gem "jekyll-gist"
   gem 'jemoji'
+
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
