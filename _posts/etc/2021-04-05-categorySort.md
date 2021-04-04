@@ -18,13 +18,13 @@ tags:
 ![기존코드](https://user-images.githubusercontent.com/70805241/113518401-12b4d600-95c1-11eb-9820-3dfda2f9a0b4.png)
 
 
-카테고리 정렬과 직접적인 관련이 있는 코드는 v-show="flag_c"가 적힌 ul 태그 바로 하단 코드였다. for문은 뭔가 어려워 보이지만 자바스크립트 for in과 사용법이 비슷해보인다. category[0]은 category name, {{category[1].size}} 이 부분은 카테고리 내 포스트 개수를 의미한다.
+카테고리 정렬과 직접적인 관련이 있는 코드는 v-show="flag_c"가 적힌 ul 태그 바로 하단 코드였다. for문은 뭔가 어려워 보이지만 자바스크립트 for in과 사용법이 비슷해 보인다. category[0]은 category name, {{category[1].size}} 이 부분은 카테고리 내 포스트 개수를 의미한다.
 
 
 ### 변경된 코드
 ![추가코드](https://user-images.githubusercontent.com/70805241/113518466-7dfea800-95c1-11eb-84da-f175dc89f3fb.png)
 
-`assing` 태그는 새로운 Liquid 변수를 생성한다. 8번 코드는 sorted_categories라는 변수를 생성하고 site.categories(전체 카테고리)를 정렬(sort)해서 담는다. 알파벳 순으로 정렬된 sorted_categories를 category 변수로 하나씩 꺼내는 형태이다.
+`assing` 태그는 새로운 Liquid 변수를 생성한다. 8번 코드는 sorted_categories라는 변수를 생성하고 site.categories(전체 카테고리)를 정렬(sort)해서 담는다. 알파벳순으로 정렬된 sorted_categories를 category 변수로 하나씩 꺼내는 형태이다.
 
 
 ## 결과
