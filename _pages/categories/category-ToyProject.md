@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /categories/ToyProject
-title: "Post about ToyProject"
+title: "Post about ToyProject."
 author_profile: true
 sidebar_main: true
 ---
@@ -11,3 +11,5 @@ sidebar_main: true
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}
+
+

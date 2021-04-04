@@ -17,9 +17,6 @@
            <li><a href="/tags/#{{tag[0] | slugify}}" class="">{{tag[0] | none }} ({{tag[1].size}})</a></li>
         {% endfor %}
         </ul>
-        
       </li>
-    
   </ul>
 </nav>
-
