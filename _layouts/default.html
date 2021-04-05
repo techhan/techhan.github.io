@@ -1,42 +1,59 @@
 ---
 ---
-
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.12.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
 -->
+<!-- 
+<style>
+.box,
+.box_done,
+.task-list-item {
+  list-style-type: none;
+}
+.task-list-item input {
+  font-size: 16px;
+  margin: 0 01em 0.25em -1.6em;
+  vertical-align: middle;
+} 
+
+</style>-->
+
+
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <script data-ad-client="ca-pub-1980241550356706" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-    {% include_cached skip-links.html %}
-    {% include_cached browser-upgrade.html %}
-    {% include_cached masthead.html %}
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
 
     <div class="initial-content">
+<!--       {{ content | replace: '
+      <li>[ ]', '</li>
+      <li class="box">' | replace: '</li>
+      <li>[x]', '</li>
+      <li class="box_done">' }}</li> -->
       {{ content }}
     </div>
 
     {% if site.search == true %}
       <div class="search-content">
-        {% include_cached search/search_form.html %}
+        {% include search/search_form.html %}
       </div>
     {% endif %}
-
-    <div id="footer" class="page__footer">
+    <div class="page__footer">
       <footer>
         {% include footer/custom.html %}
-        {% include_cached footer.html %}
+        {% include footer.html %}
       </footer>
     </div>
-
     {% include scripts.html %}
-
   </body>
 </html>
