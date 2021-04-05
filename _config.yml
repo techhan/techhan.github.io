@@ -159,10 +159,12 @@ exclude:
   - log
   - node_modules
   - package.json
+  - package-lock.json
   - Rakefile
   - README
   - tmp
-  - deploy.sh
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
@@ -211,6 +213,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache
 
 
 
@@ -221,6 +224,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache
 
 
 
@@ -289,6 +293,8 @@ defaults:
       layout: single
       classes: wide
       author_profile: true
+    sidebar : 
+      title : sibal
 
 #build option
 # Settings for builing master branch with travis-ci
