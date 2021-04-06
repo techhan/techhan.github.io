@@ -4,7 +4,6 @@ permalink: /categories/ToyProject
 title: "Post about ToyProject."
 author_profile: true
 sidebar_main: true
-search: true
 ---
 
 {% assign posts = site.categories.ToyProject | sort:"date" %}
