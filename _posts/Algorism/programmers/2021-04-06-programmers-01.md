@@ -19,7 +19,7 @@ tags:
 
 ## 제한사항
 {: style="margin-bottom:0px; padding-bottom:0px"}
-> numbers의 길이는 2 이상 100 이하입니다.
+> numbers의 길이는 2 이상 100 이하입니다. <br>
 numbers의 모든 수는 0 이상 100 이하입니다.
 
 <br>
