@@ -1,7 +1,7 @@
 ---
 title:  "[github pages] minimal mistakes 사이드 바 카테고리 정렬"
 excerpt: "카테고리 정렬, 포스트 왼쪽에 카테고리 추가하기"
-search: true
+
 categories: 
   - etc
 tags: 

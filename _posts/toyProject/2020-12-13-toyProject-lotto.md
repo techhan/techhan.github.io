@@ -1,7 +1,7 @@
 ---
 title: "[JavaScript] 로또 당첨 번호"
 excerpt: "간단하게 만들어본 로또 당첨 번호 프로그램"
-search: true
+
 categories: 
   - ToyProject
 tags: 
