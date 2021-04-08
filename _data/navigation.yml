@@ -4,11 +4,6 @@ main:
     url: "https://techhan.github.io/portfolio/"
   - title: "Category"
     url: "/categories/"
+  - title : "Tags"
+    url: "/tags/"
 
-#posts:
-#  - title: til
-#    children:
-#      - title : "codeup"
-#        url: /categories/#til
-
-# 블로그 만들기 포스트 사이드바

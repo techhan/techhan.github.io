@@ -5,7 +5,7 @@ categories:
   - Algorithm
 tags: 
   - Programmers
-  - Java
+  - JAVA
   - Level_1
 ---
 
