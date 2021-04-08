@@ -11,11 +11,27 @@
         {% endfor %}
         </ul>
         
+
+
+
         <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
         <ul v-show="flag_t">
-        {% for tag in site.tags %}
-           <li><a href="/tags/#{{tag[0] | slugify}}" class="">{{tag[0] | none }} ({{tag[1].size}})</a></li>
-        {% endfor %}
+        
+          {% assign tags_max = 0 %}
+          {% for tag in site.tags %}
+            {% if tag[1].size > tags_max %}
+              {% assign tags_max = tag[1].size %}
+            {% endif %}
+          {% endfor %}
+
+            {% for i in (1..tags_max) reversed %}
+              {% for tag in site.tags %}
+                {% if tag[1].size == i %}
+                  <li><a href="/tags/#{{tag[0] | slugify}}" class="">{{tag[0] | none }} ({{tag[1].size}})</a></li>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+            
         </ul>
       </li>
   </ul>
