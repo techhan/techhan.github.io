@@ -273,6 +273,7 @@ defaults:
     values:
       layout: single
       classes: wide
+      excerpt : 
       author_profile: true
       comments: true
       share: true
@@ -290,6 +291,7 @@ defaults:
     values:
       layout: single
       classes: wide
+      search : false
       author_profile: true
 
 
