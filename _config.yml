@@ -290,7 +290,6 @@ defaults:
     values:
       layout: single
       classes: wide
-      search : false
       author_profile: true
 
 

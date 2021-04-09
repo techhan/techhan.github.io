@@ -4,6 +4,7 @@ permalink: /categories/Academy
 title: "Post about Academy."
 author_profile: true
 sidebar_main: true
+search : false
 ---
 
 {% assign posts = site.categories.Academy | sort:"date" | reverse %}
