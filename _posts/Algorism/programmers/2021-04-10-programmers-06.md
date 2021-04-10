@@ -83,7 +83,7 @@ class Solution {
 }
 ```
 
-![결과](https://user-images.githubusercontent.com/70805241/114253971-ccf47500-99e7-11eb-8da6-a68f5f746ebd.png){: width="500" height="500"}
+![결과](https://user-images.githubusercontent.com/70805241/114253971-ccf47500-99e7-11eb-8da6-a68f5f746ebd.png){: width="600" height="600"}
 
 <br>
 
