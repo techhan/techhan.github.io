@@ -1,5 +1,5 @@
 ---
-title: "[프로그래머스] 정수 제곱근 판별(JAVA)"
+title: "[프로그래머스] 핸드폰 번호 가리기(JAVA)"
 excerpt: "Level 1"
 categories: 
   - Algorithm
