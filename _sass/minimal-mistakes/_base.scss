@@ -269,9 +269,11 @@ figure {
 
 figcaption {
   margin-bottom: 0.5em;
-  color: $muted-text-color;
-  font-family: $caption-font-family;
+  color: #898c8fa8;
+ // font-family: $caption-font-family;
+  font-family: serif;
   font-size: $type-size-6;
+  text-align : center;
 
   a {
     -webkit-transition: $global-transition;
