@@ -1,5 +1,5 @@
 ---
-title: "[프로그래머스] 하샤드 수(JAVA)"
+title: "[프로그래머스] 행렬의 덧셈(JAVA)"
 excerpt: "Level 1"
 categories: 
   - Algorithm
