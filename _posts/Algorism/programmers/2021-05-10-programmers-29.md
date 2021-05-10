@@ -22,12 +22,16 @@ tags:
 
 ## 입출력 예
 
-![프로그래머스](https://user-images.githubusercontent.com/70805241/117703715-efef9000-b204-11eb-977a-278db1b81603.png)
-
+|arr1|arr2|return|
+|:------|:------|:------|
+|[[1,2],[2,3]]|[[3,4],[5,6]]|[[4,6],[7,9]]|
+|[[1],[2] ]|[[3],[4]]|[[4],[6]]|
 
 <br>
 
 ## JAVA 풀이 과정
+
+{% raw %}
 
 ```java
 class Solution {
@@ -43,6 +47,8 @@ class Solution {
 }
 ```
 
+{% endraw %}
+
 <br>
 
 ![결과](https://user-images.githubusercontent.com/70805241/117671014-fbc65c80-b1da-11eb-94b8-bfdbbc516f2b.png)
@@ -56,6 +62,8 @@ class Solution {
 
 
 **다른 사람 풀이** <br>
+
+{% raw %}
 
 ```java
 // 임성민 , - , - , 탈퇴한 사용자 , - 외 6 명
@@ -77,6 +85,8 @@ class SumMatrix {
     }
 }
 ```
+
+{% endraw %}
 
 <br>
 
