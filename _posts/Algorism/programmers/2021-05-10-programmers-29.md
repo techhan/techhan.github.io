@@ -8,7 +8,7 @@ tags:
   - JAVA
   - Level_1
 ---
-
+ 
 ## 문제 설명
 {: style="margin-bottom:0px; padding-bottom:0px"}
 
