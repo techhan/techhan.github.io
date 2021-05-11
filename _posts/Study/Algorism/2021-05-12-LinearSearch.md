@@ -33,41 +33,17 @@ toc : true
 
 
 
-### 적용하기(프로그래머스 : 서울에서 김서방 찾기)
-[프로그래머스로 이동](https://programmers.co.kr/learn/courses/30/lessons/12919) <br>
+### 적용하기
 
-
-**기존 작성 코드** <br>
+매개 변수로 주어지는 배열 a와, 배열의 길이인 n, 그리고 검색할 값이 담겨있는 key가 주어질 때 다음과 같이 구현할 수 있다. <br>
 
 ```java
 class Solution {
-    public String solution(String[] seoul) {
-        String answer = "";
-        
-        for(int i = 0; i < seoul.length; i++){
-            if(seoul[i].equals("Kim")){
-                answer = "김서방은 " + i + "에 있다";
-                break;
-            }
+    public String solution(int[] a, int n, int key) {
+        for(int i = 0; i < n; i++) {
+            if(a[i] == key) return i;
         }
-        return answer;
-    }
-}
-```
-
-<br><br>
-
-**리팩토링** <br>
-
-```java
-class Solution {
-    public String solution(String[] seoul) {        
-        for(int i = 0; i < seoul.length; i++){
-            if(seoul[i].equals("Kim")){
-                return "김서방은 " + i + "에 있다";
-            }
-        }
-        return "";
+        return -1; // 검색 실패 -1 반환
     }
 }
 ```
@@ -97,7 +73,7 @@ class Solution {
 
 ### 적용하기
 
-위 사진과 같은 배열 int[] a, 배열의 길이인 n, 검색할 값이 담긴 변수 key가 매개 변수로 주어질 때 아래와 같이 구현할 수 있다.
+기존 배열의 길이에 +1를 한 배열 a, 배열의 길이인 n, 검색할 값이 담긴 변수 key가 매개 변수로 주어질 때 아래와 같이 구현할 수 있다.
 
 ```java
 class Solution {
@@ -112,3 +88,8 @@ class Solution {
     }
 }
 ```
+
+
+<br><br>
+
+- 참고 : Do it 자료구조와 함께 배우는 알고리즘 입문 자바 편
