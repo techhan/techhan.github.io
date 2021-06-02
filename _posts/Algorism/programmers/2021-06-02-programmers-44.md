@@ -1,6 +1,6 @@
 ---
 title: "[프로그래머스] N개의 최소공배수(JAVA)"
-excerpt: "Level 1"
+excerpt: "Level 2"
 categories: 
   - Algorithm
 tags: 
