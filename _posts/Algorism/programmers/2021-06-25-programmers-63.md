@@ -1,4 +1,4 @@
-----
+---
 title: "[프로그래머스] 프린터 (JAVA)"
 excerpt: "Level 2"
 categories: 
