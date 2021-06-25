@@ -10,8 +10,7 @@ tags:
 ---
 
 > ## 문제 설명
->
-> {: style="margin-bottom:0px; padding-bottom:0px"}
+{: style="margin-bottom:0px; padding-bottom:0px"}
 
 일반적인 프린터는 인쇄 요청이 들어온 순서대로 인쇄합니다. 그렇기 때문에 중요한 문서가 나중에 인쇄될 수 있습니다. 이런 문제를 보완하기 위해 중요도가 높은 문서를 먼저 인쇄하는 프린터를 개발했습니다. 이 새롭게 개발한 프린터는 아래와 같은 방식으로 인쇄 작업을 수행합니다.<br>
 
@@ -34,8 +33,7 @@ tags:
 <br><br>
 
 > ## 제한사항
->
-> {: style="margin-bottom:0px; padding-bottom:0px"}
+{: style="margin-bottom:0px; padding-bottom:0px"}
 
 - 현재 대기목록에는 1개 이상 100개 이하의 문서가 있습니다.
 - 인쇄 작업의 중요도는 1~9로 표현하며 숫자가 클수록 중요하다는 뜻입니다.
